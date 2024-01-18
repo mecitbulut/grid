@@ -1,62 +1,71 @@
-.grid {
-    background-color: bisque;
-    height: 40vh;
-      display: grid;
-    margin-bottom: 10px;
-
-      grid-template-areas:
-        "two     three    five"
-        "one     one        five"
-        "one    one        five"
-        "four    .        five";
+body {
+	overflow-x: hidden;
+	margin: 0;
 }
 
-.flex {
-    background-color: coral;
-    height: 40vh;
+header {
+	background-color: lightskyblue;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	position: sticky;
+	top: 0;
 }
 
-.one {
-    grid-area: one;
-    background-color: cyan;
+main {
+	display: grid;
+	grid-template-areas: 
+		"content content sidebar";
 }
 
-.two {
-    grid-area: two;
-    background-color: greenyellow;
-
-    flex-grow: 1;
+.content {
+	grid-area: content;
+	margin: 10px;
 }
 
-.three {
-    grid-area: three;
-    background-color: darkslateblue;
-
-    flex-grow: 1;
+.sidebar {
+	grid-area: sidebar;
+	margin: 10px;
 }
 
-.four {
-    grid-area: four;
-    background-color: cornflowerblue;
-
-    flex-grow: 1;
+.article {
+	margin-bottom: 25px;
+	padding: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
 }
 
-.five {
-    grid-area: five;
-    background-color: lightsalmon;
+.links {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 
-    flex-grow: 1;
+	flex-grow: 1;
 }
 
-.container1 {
-    display: flex;
+#icon {
+	height: 50px;
+	width: auto;
 }
 
-.empty {
-    flex-grow: 1;
+.title {
+	margin-bottom: 10px;
+	text-align: center;
 }
 
-.container3 {
-    display: flex;
+.links > a {
+	text-decoration: none;
+	color: black;
+	border: 1px solid gray;
+	
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+
+	flex-grow: 1;
+	height: 100%;
+}
+
+.links > a:hover {
+	background-color: skyblue;
 }
